@@ -1,6 +1,6 @@
 <?php include './include/header.php'; ?>
 
-<div class="container justify-content-center mt-5" style="width: 500px;">
+<div class="container justify-content-center my-5" style="width: 500px;">
     <div class="card shadow">
         <div class="card-header bg-white p-5">
             <h2 class="persian text-center">ورود</h2>
