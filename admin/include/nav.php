@@ -12,8 +12,8 @@
             کالا
           </a>
           <ul class="dropdown-menu persian" aria-labelledby="goods">
-            <li><a class="dropdown-item" href="../products/index.php">کالاها</a></li>
-            <li><a class="dropdown-item" href="../products/create.php">کالای جدید</a></li>
+            <li><a class="dropdown-item" href="./products.php">کالاها</a></li>
+            <li><a class="dropdown-item" href="./add_product.php">کالای جدید</a></li>
             
           </ul>
         </li>
@@ -22,15 +22,15 @@
             دسته بندی
           </a>
           <ul class="dropdown-menu persian" aria-labelledby="category">
-            <li><a class="dropdown-item" href="../categories/index.php">دسته بندی ها</a></li>
-            <li><a class="dropdown-item" href="../categories/create.php">دسته بندی جدید</a></li>
+            <li><a class="dropdown-item" href="./categories.php">دسته بندی ها</a></li>
+            <li><a class="dropdown-item" href="./add_category.php">دسته بندی جدید</a></li>
             
           </ul>
         </li>
 
 
         <li class="nav-item">
-          <a class="nav-link  persian" aria-current="page" href="../orders/index.php">سفارش ها</a>
+          <a class="nav-link  persian" aria-current="page" href="./orders.php">سفارش ها</a>
         </li>
        
       </ul>
