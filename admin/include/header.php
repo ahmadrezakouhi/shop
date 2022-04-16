@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
     
     <style>
         @font-face {
     font-family: 'shabnam';
 
-    src: url('../../font/shabnam.ttf') ;
+    src: url('../font/shabnam.ttf') ;
     
   }
 
@@ -34,7 +34,7 @@
       }
 
       body{
-        background-image: url('../../images/background.jpg');
+        background-image: url('../images/background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
