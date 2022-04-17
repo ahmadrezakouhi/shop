@@ -2,6 +2,14 @@
 include './include/header.php';
 include './include/nav.php';
 
+if(!isset($_SESSION['email'])){
+    header('location: login.php');
+}
+
+
+$query = "SELECT `products`.`name` AS `product_name` , `categories`.`name` AS `category_name`
+,`price`,`description`,`image` FROM `products`INNER JOIN `categories` ON `products`.`category_id`=`categories`.`id`";
+$result = mysqli_query($conn,$query);
 ?>
 
 <div class="container d-flex justify-content-center">
@@ -28,14 +36,16 @@ include './include/nav.php';
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>تی شرت</td>
-                    <td>این یک تی شرت است</td>
-                    <td>500000</td>
-                    <td>زنانه</td>
-                    <td><img src="" alt=""></td>
+                <?php while($row = mysqli_fetch_assoc($result)):?>
+                <tr >
+                    <td ><?php echo $row['product_name'] ?></td>
+                    <td><?php echo $row['description'] ?></td>
+                    <td><?php echo $row['price'] ?></td>
+                    <td><?php echo $row['category_name'] ?></td>
+                    <td><img src="../images/<?php echo $row['image'] ?>" class="img-thumbnail" alt="" width="100px" height="100px"></td>
                     <td><a class="btn btn-danger persian">حذف</a></td>
                 </tr>
+                <?php endwhile;?>
             </tbody>
         </table>
     </div>
