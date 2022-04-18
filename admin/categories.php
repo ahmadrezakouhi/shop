@@ -1,7 +1,8 @@
 <?php 
 include './include/header.php';
 include './include/nav.php';
-
+$query = "SELECT * FROM `categories`";
+$result = mysqli_query($conn,$query);
 ?>
 
 <div class="container d-flex justify-content-center">
@@ -16,10 +17,12 @@ include './include/nav.php';
         </tr>
     </thead>
     <tbody>
+       <?php while($row = mysqli_fetch_assoc($result)): ?>
         <tr>
-            <td>زنانه</td>
-            <td><a class="btn btn-danger persian">حذف</a></td>
+            <td><?php echo $row['name']; ?></td>
+            <td><a class="btn btn-danger persian" href="delete_category.php?id=<?php echo $row['id']; ?>">حذف</a></td>
         </tr>
+        <?php endwhile; ?>
     </tbody>
 </table>
     </div>
