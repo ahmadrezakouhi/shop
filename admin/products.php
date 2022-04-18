@@ -7,7 +7,7 @@ if(!isset($_SESSION['email'])){
 }
 
 
-$query = "SELECT `products`.`name` AS `product_name` , `categories`.`name` AS `category_name`
+$query = "SELECT `products`.`id` AS `id`, `products`.`name` AS `product_name` , `categories`.`name` AS `category_name`
 ,`price`,`description`,`image` FROM `products`INNER JOIN `categories` ON `products`.`category_id`=`categories`.`id`";
 $result = mysqli_query($conn,$query);
 ?>
@@ -43,7 +43,8 @@ $result = mysqli_query($conn,$query);
                     <td><?php echo $row['price'] ?></td>
                     <td><?php echo $row['category_name'] ?></td>
                     <td><img src="../images/<?php echo $row['image'] ?>" class="img-thumbnail" alt="" width="100px" height="100px"></td>
-                    <td><a class="btn btn-danger persian">حذف</a></td>
+                    <td><a class="btn btn-danger persian" href="delete_product.php?id=
+                    <?php echo $row['id'];?>">حذف</a></td>
                 </tr>
                 <?php endwhile;?>
             </tbody>
